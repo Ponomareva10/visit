@@ -1,0 +1,21 @@
+.content {
+    padding: 70px 0;
+    background-color: #fff;
+}
+
+.discription {
+    font-size: 20px;
+    color: darkgrey;
+}
+
+.icon__wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+}
+
+.icon {
+    width: 20px;
+    height: 20px;
+    background-color: darkgrey;
+}
