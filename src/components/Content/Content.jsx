@@ -1,6 +1,6 @@
 import React from 'react';
 import s from './s.module.css'
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Content = () => {
 
