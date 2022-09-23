@@ -3,7 +3,7 @@ import s from './s.module.css';
 import insta from '../../image/insta.svg';
 import facebook from '../../image/fb.svg';
 import whatsapp from '../../image/wapp.svg';
-import chrome from '../..//image/chrome.svg';
+import chrome from '../../image/chrome.svg';
 
 const Content = () => {
 
