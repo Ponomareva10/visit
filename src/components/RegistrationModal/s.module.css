@@ -1,25 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
 .Registration {
-    display: flex;
-    flex-direction: column;
     padding: 20px 50px 40px 50px;
-    width: 50%;
+    width: 40%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
     border-radius: 10px;
 }
 
 .Registration__title {
+    width: 100%;
     font-size: 32px;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
 }
 
 .Registration__input_cont {
+    width: 97%;
     text-align: start;
+    margin-bottom: 10px;
 }
 
 .Registration__input_title {
+    display: inline-block;
     font-size: 16px;
     font-weight: 500;
-    margin-bottom: 6px;
+    margin-bottom: 10px;
     color: rgba(0, 0, 0, 0.5);
 }
 
@@ -31,6 +38,7 @@
     border-radius: 8px;
     outline: none;
     font-size: 16px;
+    transition: .4s;
 }
 
 .Registration__input:focus {
@@ -38,18 +46,77 @@
 }
 
 .Registration__password_cont {
+    width: 97%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin-bottom: 20px;
+    column-gap: 25px;
 }
 
 .Registration__btn {
-    padding: 16px 0 16px 0;
+    padding: 16px;
     width: 100%;
     border-radius: 8px;
     border: none;
     font-size: 20px;
     background-color: black;
     color: white;
+    cursor: pointer;
+    transition: .4s;
+    outline: none;
+}
+
+.Registration__btn:hover {
+    background-color: rgb(72, 72, 72);
+}
+
+@media (max-width: 720px) {
+    .Registration {
+        width: 50%;
+    }
+
+    .Registration__title {
+        font-size: 26px;
+        margin-bottom: 16px;
+    }
+
+    .Registration__input_cont {
+        width: 94%;
+        margin-bottom: 8px;
+    }
+
+    .Registration__input_title {
+        font-size: 14px;
+        margin-bottom: 4px;
+    }
+
+    .Registration__input {
+        padding: 6px;
+        height: 26px;
+        font-size: 14px;
+    }
+
+    .Registration__password_cont {
+        width: 100%;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .Registration__btn {
+        padding: 12px;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 574px) {
+    .Registration {
+        width: 70%;
+    }
+}
+
+@media (max-width: 340px) {
+    .Registration {
+        width: 100%;
+    }
 }
