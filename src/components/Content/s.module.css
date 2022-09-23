@@ -12,10 +12,41 @@
     display: flex;
     justify-content: center;
     gap: 4px;
+    margin: 60px 0 35px 0;
+}
+
+.iconBg {
+    display: inline-block;
+    width: 65px;
+    height: 65px;
+    background-color: rgb(126, 123, 123);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .icon {
-    width: 20px;
-    height: 20px;
-    background-color: darkgrey;
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+
+.btnTel,
+.btnContact {
+    display: block;
+    padding: 18px 48px;
+    background-color:  rgb(126, 123, 123);
+    border-radius: 50px;
+    margin: 15px auto;
+    border: none;
+}
+
+.btnContact {
+    background-color: tomato;
+}
+
+.btn {
+    color: #fff;
+    text-decoration: none;
 }

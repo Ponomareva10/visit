@@ -1,4 +1,6 @@
 .Registration {
+    display: flex;
+    flex-direction: column;
     padding: 20px 50px 40px 50px;
     width: 50%;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
@@ -47,5 +49,7 @@
     width: 100%;
     border-radius: 8px;
     border: none;
-    font-size: 16px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
 }
