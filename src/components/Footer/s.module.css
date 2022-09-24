@@ -19,15 +19,18 @@
   object-fit: contain;
 }
 
-a,
-a:hover { 
-  text-decoration-color: tomato;
-  color: tomato;
+a {
+  text-decoration: none;
 }
 
-.link{
+.link,
+.link:hover { 
+  text-decoration: none;
+  color: tomato;
   font-style: normal;
 }
+
+
 
 .uniKod {
   color: #fff;

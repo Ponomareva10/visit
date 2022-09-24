@@ -1,5 +1,5 @@
 .content {
-    padding: 70px 0;
+    padding-bottom: 70px ;
     background-color: #fff;
 }
 
@@ -44,9 +44,14 @@
 
 .btnContact {
     background-color: tomato;
+    color: #fff;
 }
 
 .btn {
     color: #fff;
+    text-decoration: none;
+}
+
+.btnContact:hover {
     text-decoration: none;
 }

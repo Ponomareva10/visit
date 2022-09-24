@@ -5,7 +5,10 @@ import facebook from '../../image/fb.svg';
 import whatsapp from '../../image/wapp.svg';
 import chrome from '../../image/chrome.svg';
 
+
 const Content = () => {
+  // const [input, setInput] = useState('')
+
 
   return (
     <div className={s.content}>
@@ -37,6 +40,9 @@ const Content = () => {
       </button>
       <button className={s.btnContact}>
         <a className={s.btn} href='http://vipcrd.ru/user/14/download'>Сохранить контакты</a>
+      </button>
+      <button className={s.btnContact}>
+        Редактировать
       </button>
     </div>
   );
