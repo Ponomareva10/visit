@@ -1,0 +1,103 @@
+.Authorization {
+    width: 30%;
+    position: absolute;
+    padding: 20px 50px 40px 50px;
+    top: 52%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    box-shadow: 2px 3px 10px -4px #4f4d4d;
+    border-radius: 20px;
+}
+
+.Authorization__title {
+    /* margin: 40px 120px 10px 120px; */
+    padding: 0;
+    text-align: center;
+    color: black;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.Authorization__input {
+    margin: 10px 0px;
+    position: relative;
+}
+
+.Authorization__input input {
+    padding: 17px;
+    width: 100%;
+    color: #000;
+    background: none;
+    outline: none;
+    border: .5px solid rgb(187, 185, 185);
+    border-radius: 5px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.Authorization__input input[type="text"]:focus, .Authorization__input input[type="password"]:focus {
+    border: .5px solid blue;
+}
+
+.Authorization__input h3 {
+    float: left;
+    margin-bottom: 10px;
+    font-size: 19px;
+    font-weight: 400;
+    color: rgba(0,0,0,0.6 );
+}
+
+.setType_input_btn {
+    background: none;
+    outline: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    opacity: .6;
+}
+
+.Authorization__input div {
+    float: left;
+    font-size: 12px;
+}
+
+.Authorization__forget {
+    float: right;
+    margin-top: 20px;
+    display: block;
+    color: rgb(165, 164, 164);
+    font-weight: 500;
+    font-size: 16px;
+}
+
+.Authorization__come {
+    margin-top: 65px;
+}
+
+.btn__come button {
+    width: 100%;
+    padding: 18px;
+    color: rgb(122, 130, 144);
+    background: none;
+    outline: none;
+    border-radius: 10px;
+    border: 3px solid rgb(122, 130, 144);
+    box-sizing: border-box;
+    font-size: 20px;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.btn__come button:hover {
+    /* background: rgb(219, 231, 250); */
+    background: rgb(122, 130, 144);
+    color: #fff;
+    outline: none;
+
+}
