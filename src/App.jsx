@@ -3,6 +3,7 @@ import "./App.css";
 import Main from "./pages/Main";
 import { Routes, Route} from "react-router-dom";
 import ReductCard from "./components/ReductCard/ReductCard";
+import Authorization from './components/AuthorizationModal/Authorization';
 
 function App() {
   return (
