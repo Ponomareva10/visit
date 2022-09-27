@@ -1,14 +1,12 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import s from './s.module.css';
 import insta from '../../image/insta.svg';
 import facebook from '../../image/fb.svg';
 import whatsapp from '../../image/wapp.svg';
 import chrome from '../../image/chrome.svg';
 
-
 const Content = () => {
-  // const [input, setInput] = useState('')
-
 
   return (
     <div className={s.content}>
@@ -35,15 +33,17 @@ const Content = () => {
         </i>
       </a>
       </div>
-      <button className={s.btnTel}>
+      <button id={s.btnTel}>
         <a className={s.btn} href='tel: +996755616116'>+996755616116</a>
       </button>
       <button className={s.btnContact}>
         <a className={s.btn} href='http://vipcrd.ru/user/14/download'>Сохранить контакты</a>
       </button>
-      <button className={s.btnContact}>
-        Редактировать
-      </button>
+      <Link to="/reduct">
+        <button type="button" className={s.btnContact}  >
+          Редактировать
+        </button>
+      </Link>
     </div>
   );
 };

@@ -2,7 +2,7 @@
   width: 100%;
   min-height: 110px;
   background-color: rgb(40, 39, 39);
-  padding-top: 20px;
+  padding: 20px 0 15px 0;
 }
 
 .footerLink {
@@ -19,18 +19,12 @@
   object-fit: contain;
 }
 
-a {
-  text-decoration: none;
-}
-
-.link,
-.link:hover { 
-  text-decoration: none;
+a.link,
+a.link:hover { 
+  text-decoration-color: tomato;
   color: tomato;
   font-style: normal;
 }
-
-
 
 .uniKod {
   color: #fff;

@@ -13,18 +13,14 @@ const Footer = () => {
         <a href='https://instagram.com/vipcard.kg/'>
             <img className={s.icon} src={instaTomato} alt="icon" />
         </a>
-        <a href='tel:+996505552234'>
-          <i className={s.link}  >
-            +996505552234
-          </i>
+        <a className={s.link} href='tel:+996505552234'>
+          +996505552234
         </a>
       </div>
       <div>
         <span className={s.uniKod}>Все права защищены © 2021</span>
-        <a href='http://vipcrd.ru/'>
-          <i className={s.link}  >
-            VIP-CARD.KG
-          </i>
+        <a className={s.link} href='http://vipcrd.ru/'>
+          VIP-CARD.KG
         </a>
       </div>
     </div>

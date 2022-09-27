@@ -1,16 +1,16 @@
-import './App.css';
-import Content from './components/Content/Content';
-import Footer from './components/Footer/Footer';
-import Visit from './components/Visit/Visit';
-import BasicExample from './components/Accordion/Accordion';
+import React from "react";
+import "./App.css";
+import Main from "./pages/Main";
+import { Routes, Route} from "react-router-dom";
+import ReductCard from "./components/ReductCard/ReductCard";
 
 function App() {
   return (
     <div className="App">
-      <Visit />
-      <BasicExample />
-      <Content />
-      <Footer />
+      <Routes>
+        <Route path="/" element={<Main />}></Route>
+        <Route path="/reduct" element={<ReductCard/>}></Route>
+      </Routes>
     </div>
   );
 }

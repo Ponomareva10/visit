@@ -1,11 +1,20 @@
 .wrapper {
   padding: 75px 10px;
 }
+
+.textarea {
+  width: 100%;
+  min-height: 80px;
+  max-height: fit-content;
+  border: none;
+}
+
 .button {
-  width: 100px;
-  height: 30px;
-  border-radius: 6px;
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
   border: none;
   background-color: tomato;
   margin-top: 15px;
+  color: #fff;
 }
