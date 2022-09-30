@@ -2,6 +2,8 @@ import React from 'react';
 import s from './s.module.css';
 import {useState} from 'react';
 import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { saveToLocalStorage } from '../../store/authSlice';
 
 
 const Authorization = () => {
@@ -13,10 +15,14 @@ const Authorization = () => {
     const [passwordError,setPasswordError] = useState("Password cannot be empty");
     const [formValid, setFormValid] = useState (true);
     const [type, setType ] = useState(true);
+    const [styleClass, setStyleClass ] = useState(true);
+
+
+    const dispatch = useDispatch();
 
 
         useEffect ( () => {
-            if (emailError && passwordError) {
+            if (emailError || passwordError) {
                 setFormValid(false)
             } else {
                 setFormValid(true)
@@ -36,8 +42,8 @@ const Authorization = () => {
 
     const passwordHandler = (e) => {
         setPassword(e.target.value)
-            if (e.target.value.length < 3 ||e.target.value.length > 12) {
-                setPasswordError("Password must be longer than 3 or less than 12")
+            if (e.target.value.length < 8 ||e.target.value.length > 16) {
+                setPasswordError("Password must be longer than 8 or less than 16")
                 if(!e.target.value) {
                     setPasswordError("Password cannot be empty")
                 }
@@ -59,24 +65,36 @@ const Authorization = () => {
 
     function removeType() {
         setType(current => !current);
+
+        setStyleClass(prev => !prev);
     }
 
+    function onSubmit(e) {
+        e.preventDefault();
+
+        dispatch(saveToLocalStorage([{value: email, title: "email"}, {value: password, title: "password"}]))
+        
+    }
     
     return (
         <div className={s.Authorization}>
             <h1 className=  {s.Authorization__title}>Login to your profile</h1>
-            <form>
+            <form onSubmit={onSubmit}>
             <div className=  {s.Authorization__input}>
                 <h3>Email</h3>
-                {(emailDirty && emailError) && <div style={{color:"red", position:"absolute", marginTop:"55px", }}>{emailError}</div>}
+                
                 <input onChange={e => emailHandler(e)} value={email} onBlur = {e => blurHandler(e)} name="email" type="text" />
-                    <a className= {s.Authorization__forget} href="#">Forgot your password?</a>
+                <div className={s.Authorization__btn}>
+                {(emailDirty && emailError) && <div style={{color:"red", position:"absolute"}}>{emailError}</div>}
+                </div>
                 <h3>Password</h3>
-                {(passwordError && passwordDirty) && <div style={{color:"red", position:"absolute", marginTop:"110px"}}>{passwordError}</div>}
                 <input type={type ? "password" : "text"} onChange={e => passwordHandler(e)} value={password} onBlur = {e => blurHandler(e)}  name="password" />
-                <button type='button' className={s.setType_input_btn} onClick={removeType}>
+                <div className={s.Authorization__btn__2}>
+                {(passwordError && passwordDirty) && <div style={{color:"red", position:"absolute",}}>{passwordError}</div>}
+                </div>
+                <button type='button' className={styleClass ? s.setType_input_btn : s.active} onClick={removeType}>
                         <img width={"20px"} height={"20px"} src="https://www.svgrepo.com/show/12044/eye.svg" alt="" />
-                    </button>
+                </button>
             </div>
             <div className=  {s.Authorization__come}>
                 <div className=  {s.btn__come}>

@@ -61,19 +61,46 @@
     opacity: .6;
 }
 
-.Authorization__input div {
+.active {
+    background: none;
+    outline: none;
+    border: none;
+    width: 20px;
+    height: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    right: 15px;
+    bottom: 20px;
+    opacity: .6;
+}
+
+.setType_input_btn .active::after {
+    opacity: 0;
+}
+
+.setType_input_btn::after {
+    position: absolute;
+    content: "";
+    top: 10px;
+    left: 6px;
+    width: 21px;
+    height: 1.5px;
+    background: rgba(0,0,0,0.6 );
+    transform: rotate(40deg);
+    opacity: 1;
+}
+
+
+.Authorization__btn {
     float: left;
+    font-size: 12px;
+    margin-top: 55px;
+}
+
+.Authorization__btn__2{
     font-size: 12px;
 }
 
-.Authorization__forget {
-    float: right;
-    margin-top: 20px;
-    display: block;
-    color: rgb(165, 164, 164);
-    font-weight: 500;
-    font-size: 16px;
-}
 
 .Authorization__come {
     margin-top: 65px;
@@ -100,4 +127,155 @@
     color: #fff;
     outline: none;
 
+}
+
+@media (max-width:808px) {
+    
+    .Authorization {
+        width: 40%;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+}
+
+@media (max-width:606px) {
+    
+    .Authorization {
+        width: 50%;
+    }
+
+}
+@media (max-width:485px) {
+    
+    .Authorization {
+        width: 60%;
+        padding: 5px 30px 20px 30px;
+    }   
+
+    .Authorization__input input {
+        padding: 10px;
+        font-size: 12px;
+    }
+    .Authorization__input h3 {
+        font-size: 14px;
+    }
+    .Authorization__input div {
+        float: left;
+        font-size: 10px;
+        margin-top: 40px;
+    }
+    .Authorization__input div {
+        margin-top: 40px;
+    }
+    .btn__come button {
+        padding: 10px;
+        font-size: 16px;
+    }
+    .Authorization__come {
+        margin-top: 40px;
+    }
+    .setType_input_btn {
+        right: 10px;
+        bottom: 12px;
+        width: 15px;
+        height: 15px;
+    }
+    .setType_input_btn img {
+        width: 15px;
+        height: 15px;
+    }
+
+    .setType_input_btn::after {
+        position: absolute;
+        width: 16px;
+        top: 8px;
+        left: 5px;
+        opacity: none;
+    }
+    .Authorization__btn {
+       position: absolute;
+       width: 50%;
+       top: 2px;
+    }
+    .Authorization__btn__2 {
+        position: absolute;
+        width: 50%;
+        top: 85px;
+     }
+}
+
+
+
+@media (max-width:405px) {
+
+    .Authorization {
+        width: 70%;
+        padding: 5px 30px 20px 30px;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    } 
+}
+
+@media (max-width:355px) {
+
+    .Authorization__title {
+        font-size: 20px;
+    }
+    
+    .Authorization__input input {
+        padding: 8px;
+    }
+
+    .Authorization__input h3 {
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+
+    .setType_input_btn {
+        right: 10px;
+        bottom: 12px;
+        width: 12px;
+        height: 12px;
+    }
+
+    .setType_input_btn img {
+        width: 12px;
+        height: 12px;
+    }
+
+    .setType_input_btn::after {
+        position: absolute;
+        width: 12px;
+        top: 7px;
+        left: 6px;
+        opacity: none;
+    }
+
+    .btn__come button {
+        padding: 8px;
+        font-size: 14px;
+    }
+
+    .Authorization__come {
+        margin-top: 30px;
+    }
+
+    .Authorization__btn div {
+        position: absolute;
+        width: 100%;
+        top: -18px;
+        left: -10px;
+        font-size: 8px;
+     }
+
+     .Authorization__btn__2 div {
+         position: absolute;
+         width: 100%;
+         top: -36px;
+         left: -4px;
+         font-size: 8px;
+      }
 }
