@@ -53,3 +53,7 @@ a.btn:hover {
   background-color: tomato;
   color: #fff;
 }
+
+.linkContact {
+  text-decoration: none;
+}

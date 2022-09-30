@@ -5,11 +5,17 @@ import insta from '../../image/insta.svg';
 import facebook from '../../image/fb.svg';
 import whatsapp from '../../image/wapp.svg';
 import chrome from '../../image/chrome.svg';
+import { useSelector } from 'react-redux';
 
 const Content = () => {
 
+  // const dispatch = useDispatch();
+  const edit = useSelector(state => state)
+  console.log(edit)
+
   return (
     <div className={s.content}>
+      <div className={s.discription}>{edit}</div>
       <div className={s.discription}>We are building a new world and educating a new generation</div>
       <div className={s.icon__wrapper}>
       <a href='https://www.instagram.com/gg_consul/'>
@@ -39,7 +45,7 @@ const Content = () => {
       <button className={s.btnContact}>
         <a className={s.btn} href='http://vipcrd.ru/user/14/download'>Сохранить контакты</a>
       </button>
-      <Link to="/reduct">
+      <Link to="/reduct"  className={s.linkContact}>
         <button type="button" className={s.btnContact}  >
           Редактировать
         </button>

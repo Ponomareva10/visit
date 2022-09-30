@@ -6,8 +6,6 @@ const Visit = () => {
   const [bg, setBg] = useState("background: black");
   const [logo, setLogo] = useState("bacground: white"); 
 
-  console.log(bg, logo)
-
   const convertImg = (file) => {
     return new Promise((resolve, reject) => {
       const fileReader = new FileReader();
