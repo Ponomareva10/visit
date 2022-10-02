@@ -10,12 +10,14 @@ import { useSelector } from 'react-redux';
 const Content = () => {
 
   // const dispatch = useDispatch();
-  const edit = useSelector(state => state)
-  console.log(edit)
+  // const state = useSelector(state => state)
+  // // console.log(edit)
+  // const edit = ''
+  // console.log(state)
 
   return (
     <div className={s.content}>
-      <div className={s.discription}>{edit}</div>
+      <div className={s.discription}>{"edit"}</div>
       <div className={s.discription}>We are building a new world and educating a new generation</div>
       <div className={s.icon__wrapper}>
       <a href='https://www.instagram.com/gg_consul/'>

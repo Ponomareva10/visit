@@ -1,7 +1,25 @@
-import { createSlice } from "@reduxjs/toolkit";
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+
+export const editUser = createAsyncThunk('user/edit', async (payload, { dispatch }) => {
+    try {
+        await axios.post('/user/{user}/update')
+    } catch (error) {
+        console.error(error)
+    }
+})
+
+export const getUserInfo = createAsyncThunk('user/userInfo', async (payload, { dispatch }) => {
+    try {
+        const { data } = await axios.get('/users/{user}');
+        dispatch(setUserInfo(data))
+    } catch (error) {
+        console.error(error)
+    }
+})
 
 const state = {
-    id:1,
+    id: '',
     firstName: "", 
     lastName: "",
     email: "", 
@@ -29,11 +47,10 @@ export const visitSlice = createSlice({
     name: "visit",
     initialState: state,
     reducers: {
-        editInputs: (state, action) => {
-            state = {...state, [action.payload.inputType]: action.payload.value};
+        setUserInfo: (state, action) => {
+            state = action.payload
         }
-        
     }
 })
 
-export const {editInputs} = visitSlice.actions;
+export const { setUserInfo } = visitSlice.actions;

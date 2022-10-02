@@ -3,5 +3,5 @@ import { visitSlice } from "./visitSlice";
 
 
 export const store = configureStore({
-    reducer: visitSlice
+    reducer: visitSlice.reducer
 })
